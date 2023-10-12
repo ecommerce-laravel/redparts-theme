@@ -1,0 +1,8 @@
+{
+  "endpoints": {
+    "currency": {
+      "set": {"post":  "/currency/"},
+      "get": {"get": "/currency/"}
+    }
+  }
+}
