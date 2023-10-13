@@ -6,7 +6,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
-class RedPartsThemeServiceProvider extends ServiceProvider
+class RedpartsThemeServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
