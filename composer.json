@@ -20,7 +20,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Wjurry\\RedParts\\Providers\\RedpartsThemeServiceProvider"
+        "Wjurry\\RedParts\\Providers\\RedPartsThemeServiceProvider"
       ]
     }
   },
