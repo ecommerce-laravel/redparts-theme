@@ -3,6 +3,7 @@
 namespace Wjurry\RedParts\Providers;
 
 use Illuminate\Routing\Middleware\SubstituteBindings;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -42,8 +43,10 @@ class RedPartsThemeServiceProvider extends ServiceProvider
      */
     protected function routeConfiguration()
     {
+        $appDomain = Arr::get(parse_url(env('APP_URL')), 'host');
+
         return [
-            'domain' => env('APP_DOMAIN'),
+            'domain' => env('THEME_REDPARTS_API_DOMAIN', $appDomain),
             'as' => 'redparts.api.',
             'prefix' => 'redparts-api',
 //            'middleware' => 'nova:api',

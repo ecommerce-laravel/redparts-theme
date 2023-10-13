@@ -14,7 +14,7 @@
 
     async function loadConfigFromLaravel() {
         try {
-            const response = await fetch('/config');
+            const response = await fetch('/redparts-api/config');
             const data = await response.json();
 
             for (const key in data) {
