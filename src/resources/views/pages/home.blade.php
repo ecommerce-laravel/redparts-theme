@@ -1,4 +1,4 @@
-@extends('themes.redparts.layouts.main')
+@extends('redparts::layouts.main')
 
 @section('page-body')
 <div class="block-space block-space--layout--divider-xs"></div>
@@ -2733,4 +2733,4 @@ s0.4-0.1,0.5-0.2l1.8-1.8l5.3,5.3c0.2,0.2,0.4,0.2,0.5,0.2c0.2,0,0.4-0.1,0.5-0.2c0
 </div>
 @endsection
 
-@include('themes.redparts.pages.home.modals')
+@include('redparts::pages.home.modals')

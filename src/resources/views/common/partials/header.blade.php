@@ -524,7 +524,7 @@
                 </div>
             </div>
             <div class="header__navbar-menu">
-                @include('themes.redparts.common.partials.menus.main-menu', ['mainMenu' => $mainMenu['menuItems'] ?? []])
+                @include('redparts::common.partials.menus.main-menu', ['mainMenu' => $mainMenu['menuItems'] ?? []])
             </div>
             <div class="header__navbar-phone phone">
                 <a href="{{ app('renderRoute')($callUsMenu['menuItems'][0]['value']) }}" class="phone__body">

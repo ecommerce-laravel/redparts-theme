@@ -41,8 +41,8 @@
     <body>
         <!-- site -->
         <div class="site">
-            @include('themes.redparts.common.partials.mobile-header')
-            @include('themes.redparts.common.partials.header')
+            @include('redparts::common.partials.mobile-header')
+            @include('redparts::common.partials.header')
 
             <!-- site__body -->
             <div class="site__body">
@@ -50,22 +50,22 @@
             </div>
             <!-- site__body / end -->
 
-            @include('themes.redparts.common.partials.footer')
+            @include('redparts::common.partials.footer')
         </div>
         <!-- site -->
 
         <!-- mobile-menu -->
-        @include('themes.redparts.common.partials.mobile-menu')
+        @include('redparts::common.partials.mobile-menu')
 
         <!-- modal -->
         @yield('page-modals')
 
-        @include('themes.redparts.common.partials.photoswipe')
+        @include('redparts::common.partials.photoswipe')
 
         <!-- script -->
         @include('base-js')
 
-        @include('themes.redparts.common.partials.scripts')
+        @include('redparts::common.partials.scripts')
 
         @yield('page-scripts')
         <script src="vendor/themes/redparts/js/language-switcher.min.js"></script>

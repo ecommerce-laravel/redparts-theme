@@ -12,7 +12,7 @@
             </a>
             <div class="main-menu__submenu">
                 <ul class="menu">
-                    @include('themes.redparts.common.partials.menus.main-menu-items', ['mainMenu' => $menuItem['children'], 'isChildren' => true, 'prevMenu' => $menuItem])
+                    @include('redparts::common.partials.menus.main-menu-items', ['mainMenu' => $menuItem['children'], 'isChildren' => true, 'prevMenu' => $menuItem])
                 </ul>
             </div>
         </li>
@@ -31,7 +31,7 @@
             @if(($isChildren ?? false) && !empty($menuItem['children']))
                 <div class="menu__submenu">
                     <ul class="menu">
-                        @include('themes.redparts.common.partials.menus.main-menu-items', ['mainMenu' => $menuItem['children'], 'isChildren' => true, 'prevMenu' => $menuItem])
+                        @include('redparts::common.partials.menus.main-menu-items', ['mainMenu' => $menuItem['children'], 'isChildren' => true, 'prevMenu' => $menuItem])
                     </ul>
                 </div>
             @endif
