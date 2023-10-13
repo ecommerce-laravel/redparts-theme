@@ -16,8 +16,11 @@ class RedPartsThemeServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/redparts'),
-            __DIR__.'/../public' => public_path('vendor/themes/redparts'),
         ]);
+
+        $this->publishes([
+            __DIR__.'/../public' => public_path('vendor/themes/redparts'),
+        ], 'public');
     }
 
     /**
