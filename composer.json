@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Wjurry\\EcommerceLaravel\\Themes\\RedParts": "src/"
+      "Wjurry\\EcommerceLaravel\\Themes\\RedParts\\": "src/"
     }
   },
   "extra": {
