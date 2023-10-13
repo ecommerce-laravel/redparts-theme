@@ -1,6 +1,6 @@
 <?php
 
-namespace Wjurry\RedParts\Controllers;
+namespace Wjurry\RedParts\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 

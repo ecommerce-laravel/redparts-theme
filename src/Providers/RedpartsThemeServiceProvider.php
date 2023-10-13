@@ -1,6 +1,6 @@
 <?php
 
-namespace Wjurry\RedParts;
+namespace Wjurry\RedParts\Providers;
 
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
