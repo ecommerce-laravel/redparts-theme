@@ -1,6 +1,6 @@
 <?php
 
-namespace Wjurry\EcommerceLaravel\Themes\RedParts\Controllers;
+namespace Wjurry\RedParts\Controllers;
 
 use Illuminate\Routing\Controller;
 

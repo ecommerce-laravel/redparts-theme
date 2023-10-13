@@ -14,13 +14,13 @@
   },
   "autoload": {
     "psr-4": {
-      "Wjurry\\EcommerceLaravel\\Themes\\RedParts\\": "src/"
+      "Wjurry\\RedParts\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Wjurry\\EcommerceLaravel\\Themes\\RedParts\\Providers\\RedPartsThemeServiceProvider"
+        "Wjurry\\RedParts\\Providers\\RedPartsThemeServiceProvider"
       ]
     }
   },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Wjurry\EcommerceLaravel\Themes\RedParts;
+namespace Wjurry\RedParts;
 
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Facades\Route;
