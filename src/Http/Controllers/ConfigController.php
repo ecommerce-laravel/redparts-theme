@@ -8,6 +8,6 @@ class ConfigController extends Controller
 {
     public function index()
     {
-        return response()->file(public_path('redparts/config.json'));
+        return response()->file(public_path('vendor/themes/redparts/config.json'));
     }
 }
