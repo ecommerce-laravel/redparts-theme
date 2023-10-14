@@ -46,6 +46,8 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../lang/' => lang_path('vendor/themes/redparts')
         ], 'lang');
+
+        $this->registerNovaMenu();
     }
 
     public function registerNovaMenu()
