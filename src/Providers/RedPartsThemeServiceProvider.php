@@ -33,6 +33,11 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config' => config_path()
         ], 'config');
+
+        // Publish translations
+        $this->publishes([
+            __DIR__.'/../lang/' => lang_path('vendor/themes/redparts')
+        ], 'lang');
     }
 
     /**
