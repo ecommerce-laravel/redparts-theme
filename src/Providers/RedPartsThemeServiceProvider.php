@@ -19,6 +19,9 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         // Register views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'redparts');
 
+        // Register lang
+        $this->loadJsonTranslationsFrom(__DIR__.'/../lang');
+
         // Publish views
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/redparts'),
