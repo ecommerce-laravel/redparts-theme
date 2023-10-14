@@ -9,6 +9,11 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use Laravel\Nova\Menu\Menu;
+use Laravel\Nova\Menu\MenuItem;
+use Laravel\Nova\Menu\MenuSection;
+use Laravel\Nova\Nova;
 
 class RedPartsThemeServiceProvider extends ServiceProvider
 {
@@ -41,6 +46,17 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../lang/' => lang_path('vendor/themes/redparts')
         ], 'lang');
+    }
+
+    public function registerNovaMenu()
+    {
+        Nova::mainMenu(function (NovaRequest $request, Menu $menu) {
+            $menu->append([
+                MenuSection::make('RedParts Theme', [
+                    MenuItem::make('Theme Settings', '/settings/themes.redparts-theme')
+                ])->icon('paint-brush')
+            ]);
+        });
     }
 
     /**
