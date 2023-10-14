@@ -2,8 +2,11 @@
 
 namespace Wjurry\RedParts\Providers;
 
+use App\Services\CurrenciesService;
+use Illuminate\Foundation\Application;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -60,5 +63,29 @@ class RedPartsThemeServiceProvider extends ServiceProvider
 //            'middleware' => 'nova:api',
             'excluded_middleware' => [SubstituteBindings::class],
         ];
+    }
+
+    public function register()
+    {
+        // Register currency directive and helper
+        Blade::directive('redpartsSelectedCurrency', function () {
+            return "<?php echo app('renderCurrencyName')(app()->getLocale()); ?>";
+        });
+
+        $this->app->singleton('renderCurrencyName', function (Application $app) {
+            return [[CurrenciesService::class, 'getSelectedCurrency'], $app->getLocale()];
+        });
+
+
+        // Register locale directive and helper
+        Blade::directive('redpartsSelectedLanguage', function () {
+            return "<?php echo app('renderLangName')(app()->getLocale()); ?>";
+        });
+
+        $this->app->singleton('renderLangName', function ($app) {
+            return function ($locale) {
+                return Arr::get(config("app.locales_settings.$locale.names"), $locale, '');
+            };
+        });
     }
 }
