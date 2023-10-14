@@ -53,10 +53,10 @@ class RedPartsThemeServiceProvider extends ServiceProvider
     public function registerNovaMenu()
     {
         Nova::mainMenu(function (NovaRequest $request, Menu $menu) {
-            $menu->append([
+            return $menu->append([
                 MenuSection::make('RedParts Theme', [
                     MenuItem::make('Theme Settings', '/settings/themes.redparts-theme')
-                ])->icon('paint-brush')
+                ])->icon('paint-brush')->collapsable()
             ]);
         });
     }
