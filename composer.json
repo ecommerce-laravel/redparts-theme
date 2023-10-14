@@ -1,11 +1,12 @@
 {
-  "name": "ecommerce-laravel/redparts-theme",
+  "name": "ecommerce-laravel-themes/redparts-theme",
   "description": "Automotive Parts Theme for ecommerce-laravel",
   "version": "1.0",
   "keywords": [
     "laravel",
     "ecommerce-laravel",
     "automotive",
+    "parts",
     "theme"
   ],
   "require": {
