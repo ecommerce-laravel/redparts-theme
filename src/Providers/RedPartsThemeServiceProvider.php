@@ -82,7 +82,7 @@ class RedPartsThemeServiceProvider extends ServiceProvider
 
         $this->app->singleton('renderCurrencyName', function (Application $app) {
             return function () use ($app) {
-                return Arr::get(CurrenciesService::getSelectedCurrency($app->getLocale()), 'name');
+                return Arr::get(CurrenciesService::getSelectedCurrency($app->getLocale()), sprintf('name.%s', $app->getLocale()));
             };
         });
 
