@@ -77,21 +77,24 @@ class RedPartsThemeServiceProvider extends ServiceProvider
     {
         // Register currency directive and helper
         Blade::directive('redpartsSelectedCurrency', function () {
-            return "<?php echo app('renderCurrencyName')(app()->getLocale()); ?>";
+            return "<?php echo app('renderCurrencyName')(); ?>";
         });
 
         $this->app->singleton('renderCurrencyName', function (Application $app) {
-            return [[CurrenciesService::class, 'getSelectedCurrency'], $app->getLocale()];
+            return function () use ($app) {
+                CurrenciesService::getSelectedCurrency($app->getLocale());
+            };
         });
 
 
         // Register locale directive and helper
         Blade::directive('redpartsSelectedLanguage', function () {
-            return "<?php echo app('renderLangName')(app()->getLocale()); ?>";
+            return "<?php echo app('renderLangName')(); ?>";
         });
 
-        $this->app->singleton('renderLangName', function ($app) {
-            return function ($locale) {
+        $this->app->singleton('renderLangName', function (Application $app) {
+            return function () use ($app) {
+                $locale = $app->getLocale();
                 return Arr::get(config("app.locales_settings.$locale.names"), $locale, '');
             };
         });
