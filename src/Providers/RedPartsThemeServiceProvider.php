@@ -3,22 +3,24 @@
 namespace Wjurry\RedParts\Providers;
 
 use App\Services\CurrenciesService;
+use App\Utilities\Nova;
 use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Menu\Menu;
 use Laravel\Nova\Menu\MenuItem;
 use Laravel\Nova\Menu\MenuSection;
-use Laravel\Nova\Nova;
+use Wjurry\RedParts\Nova\Resources\RedpartsThemeSettings;
 
 class RedPartsThemeServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        // Register theme routes
         $this->registerRoutes();
 
         // Register views
@@ -27,38 +29,61 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         // Register lang
         $this->loadJsonTranslationsFrom(__DIR__.'/../lang');
 
-        // Publish views
+        // Publish theme components
+        $this->publishViews();
+        $this->publishAssets();
+        $this->publishConfig();
+        $this->publishTranslations();
+
+        // Register theme Nova's components
+        $this->registerNovaMenu();
+        $this->registerNovaResource();
+    }
+
+    public function publishViews()
+    {
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path('views/vendor/redparts'),
         ]);
+    }
 
-        // Publish assets
+    public function publishAssets()
+    {
         $this->publishes([
             __DIR__.'/../public' => public_path('vendor/themes/redparts'),
         ], 'public');
+    }
 
-        // Publish config
+    public function publishConfig()
+    {
         $this->publishes([
             __DIR__.'/../config' => config_path()
         ], 'config');
+    }
 
-        // Publish translations
+    public function publishTranslations()
+    {
         $this->publishes([
             __DIR__.'/../lang/' => lang_path('vendor/themes/redparts')
         ], 'lang');
-
-        $this->registerNovaMenu();
     }
 
     public function registerNovaMenu()
     {
-        Nova::mainMenu(function (NovaRequest $request, Menu $menu) {
-            return $menu->append([
+        Nova::injectMenu(function (Request $request, Menu $menu) {
+            $menu->append([
                 MenuSection::make('RedParts Theme', [
                     MenuItem::make('Theme Settings', '/settings/themes.redparts-theme')
-                ])->icon('paint-brush')->collapsable()
+                ])->icon('color-swatch')
             ]);
         });
+    }
+
+    public function registerNovaResource()
+    {
+        Nova::resources([
+            RedpartsThemeSettings::class
+        ]);
     }
 
     /**
