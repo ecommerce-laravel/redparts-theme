@@ -73,7 +73,7 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         Nova::injectMenu(function (Request $request, Menu $menu) {
             $menu->append([
                 MenuSection::make('RedParts Theme', [
-                    MenuItem::make('Theme Settings', '/settings/redparts-theme-settings')
+                    MenuItem::make('Theme Settings', '/resources/redparts-theme-settings')
                 ])->icon('color-swatch')
             ]);
         });
