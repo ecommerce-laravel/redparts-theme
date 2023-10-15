@@ -3,6 +3,7 @@
 namespace Wjurry\RedParts\Providers;
 
 use App\Services\CurrenciesService;
+use App\Services\ThemesService;
 use App\Utilities\Nova;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use Laravel\Nova\Menu\Menu;
 use Laravel\Nova\Menu\MenuItem;
 use Laravel\Nova\Menu\MenuSection;
@@ -70,6 +72,10 @@ class RedPartsThemeServiceProvider extends ServiceProvider
 
     public function registerNovaMenu()
     {
+        if (Str::lower(Arr::get(ThemesService::getActive(), 'name', '')) !== 'redparts') {
+            return;
+        }
+
         Nova::injectMenu(function (Request $request, Menu $menu) {
             $menu->append([
                 MenuSection::make('RedParts Theme', [
@@ -81,6 +87,10 @@ class RedPartsThemeServiceProvider extends ServiceProvider
 
     public function registerNovaResource()
     {
+        if (Str::lower(Arr::get(ThemesService::getActive(), 'name', '')) !== 'redparts') {
+            return;
+        }
+        
         Nova::resources([
             RedpartsThemeSettings::class
         ]);
