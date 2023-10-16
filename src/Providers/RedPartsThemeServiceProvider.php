@@ -32,6 +32,9 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         // Register lang
         $this->loadJsonTranslationsFrom(__DIR__.'/../lang');
 
+        // Register migrations
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
         // Publish theme components
         $this->publishViews();
         $this->publishAssets();
