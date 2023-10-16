@@ -34,6 +34,13 @@ class RedpartsThemeSlider extends Resource
         'name',
     ];
 
+    public static $displayInNavigation = false;
+
+    public static function uriKey()
+    {
+        return 'redparts-theme-slider';
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -56,9 +63,9 @@ class RedpartsThemeSlider extends Resource
                 ->rules('required'),
 
             Images::make('Background', 'background')
-                ->conversionOnIndexView('responsive_300') // which conversion to use for displaying the image on the index view
-                ->conversionOnDetailView('responsive_800') // which conversion to use for displaying the image on the detail view
-                ->conversionOnForm('responsive_300') // which conversion to use for displaying the image on the form view
+                ->conversionOnIndexView('responsive_1350') // which conversion to use for displaying the image on the index view
+                ->conversionOnDetailView('responsive_1350') // which conversion to use for displaying the image on the detail view
+                ->conversionOnForm('responsive_1350') // which conversion to use for displaying the image on the form view
                 ->singleMediaRules(['mimes:png,jpg,jpeg,gif']),
 
             Boolean::make('Is Active?', 'is_active'),
