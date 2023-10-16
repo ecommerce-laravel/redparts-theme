@@ -79,7 +79,8 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         Nova::injectMenu(function (Request $request, Menu $menu) {
             $menu->append([
                 MenuSection::make('RedParts Theme', [
-                    MenuItem::make('Theme Settings', '/resources/redparts-theme-settings')
+                    MenuItem::make('Theme Settings', '/resources/redparts-theme-settings'),
+                    MenuItem::make('Slider Settings', '/resources/redparts-theme-slider')
                 ])->icon('color-swatch')
             ]);
         });
@@ -90,7 +91,7 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         if (Str::lower(Arr::get(ThemesService::getActive(), 'name', '')) !== 'redparts') {
             return;
         }
-        
+
         Nova::resources([
             RedpartsThemeSettings::class
         ]);
