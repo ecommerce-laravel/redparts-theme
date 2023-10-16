@@ -17,6 +17,7 @@ use Laravel\Nova\Menu\Menu;
 use Laravel\Nova\Menu\MenuItem;
 use Laravel\Nova\Menu\MenuSection;
 use Wjurry\RedParts\Nova\Resources\RedpartsThemeSettings;
+use Wjurry\RedParts\Nova\Resources\RedpartsThemeSlider;
 
 class RedPartsThemeServiceProvider extends ServiceProvider
 {
@@ -93,7 +94,8 @@ class RedPartsThemeServiceProvider extends ServiceProvider
         }
 
         Nova::resources([
-            RedpartsThemeSettings::class
+            RedpartsThemeSettings::class,
+            RedpartsThemeSlider::class
         ]);
     }
 
