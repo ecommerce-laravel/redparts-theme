@@ -56,8 +56,8 @@ class RedpartsThemeSlider extends Resource
             NovaTinyMCE::make('Content', 'content')
                 ->options([
                     'menubar' => true,
-                    'plugins' => ['lists', 'preview', 'wordcount', 'directionality', 'link'],
-                    'toolbar' => 'undo redo | blockquote | link | bold italic forecolor | preview | backcolor alignleft aligncenter alignright alignjustify | bullist numlist outdent indent',
+                    'plugins' => ['lists', 'preview', 'wordcount', 'directionality', 'link', 'code'],
+                    'toolbar' => 'undo redo | blockquote | link | bold italic forecolor | preview | backcolor alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code',
                     'height' => '200'
                 ])
                 ->rules('required'),
