@@ -27,6 +27,8 @@ class RedpartsThemeSlider extends Model implements HasMedia
         Activatable,
         InteractsWithMedia;
 
+    protected $table = 'redparts_theme_slider';
+
     protected static function boot()
     {
         parent::boot();
