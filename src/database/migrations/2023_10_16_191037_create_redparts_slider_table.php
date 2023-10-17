@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create(self::TABLE_NAME, function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('content')->nullable();
+            $table->json('content')->nullable();
             $table->foreignIdFor(\App\Models\User::class, 'created_by');
             $table->boolean('is_active')->default('1');
             $table->timestamps();

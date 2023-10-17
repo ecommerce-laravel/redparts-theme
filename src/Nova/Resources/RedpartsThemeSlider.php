@@ -8,9 +8,12 @@ use Emilianotisato\NovaTinyMCE\NovaTinyMCE;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Http\Requests\NovaRequest;
+use Outl1ne\NovaTranslatable\HandlesTranslatable;
 
 class RedpartsThemeSlider extends Resource
 {
+    use HandlesTranslatable;
+
     /**
      * The model the resource corresponds to.
      *
@@ -41,6 +44,11 @@ class RedpartsThemeSlider extends Resource
         return 'redparts-theme-slider';
     }
 
+    public static function createButtonLabel()
+    {
+        return 'Create New Slide';
+    }
+
     /**
      * Get the fields displayed by the resource.
      *
@@ -60,9 +68,10 @@ class RedpartsThemeSlider extends Resource
                     'toolbar' => 'undo redo | blockquote | link | bold italic forecolor | preview | backcolor alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | code',
                     'height' => '200'
                 ])
-                ->rules('required'),
+                ->rules('required')
+                ->translatable(),
 
-            Images::make('Background', 'background')
+            Images::make('Background (Recommended Width: 1350px)', 'background')
                 ->conversionOnIndexView('responsive_1350') // which conversion to use for displaying the image on the index view
                 ->conversionOnDetailView('responsive_1350') // which conversion to use for displaying the image on the detail view
                 ->conversionOnForm('responsive_1350') // which conversion to use for displaying the image on the form view

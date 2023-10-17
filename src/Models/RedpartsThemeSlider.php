@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Spatie\Translatable\HasTranslations;
 use Wjurry\RedParts\Observers\RedpartsThemeSliderObserver;
 
 /**
@@ -25,9 +26,12 @@ class RedpartsThemeSlider extends Model implements HasMedia
 {
     use HasFactory,
         Activatable,
+        HasTranslations,
         InteractsWithMedia;
 
     protected $table = 'redparts_theme_slider';
+
+    public $translatable = ['content'];
 
     protected static function boot()
     {
@@ -55,6 +59,16 @@ class RedpartsThemeSlider extends Model implements HasMedia
 
     public function registerMediaConversions(Media $media = null): void
     {
+        // Mobile
+        $this->addMediaConversion('responsive_510')
+            ->width(510);
+
+        $this->addMediaConversion('responsive_blurred_510')
+            ->width(510)
+            ->quality(20)
+            ->blur(70);
+
+        // Web
         $this->addMediaConversion('responsive_1350')
             ->width(1350);
 
