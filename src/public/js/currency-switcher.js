@@ -5,13 +5,10 @@
     }
 
     $(function () {
-        let selectedCurrency = CookieManager.get('app_currency');
-
         window.switchCurrency = function(currency) {
-            CookieManager.delete('app_currency');
-            // CookieManager.set('app_currency', currency);
-            $.post('/')
-            window.location.reload();
+            $.post('/currency/switch/'+currency, function () {
+                window.location.reload();
+            });
         }
 
         window.cookieName = function (str) {

@@ -69,6 +69,7 @@
 
         @yield('page-scripts')
         <script src="vendor/themes/redparts/js/language-switcher.min.js"></script>
+        <script src="vendor/themes/redparts/js/currency-switcher.min.js"></script>
         <script src="vendor/themes/redparts/js/blurry-load.min.js"></script>
         <script>
             new BlurryImageLoad().load();
