@@ -6,7 +6,7 @@
 
     $(function () {
         window.switchCurrency = function(currency) {
-            $.post('/currency/switch/'+currency, function () {
+            $.post('/redparts-api/currency/switch/'+currency, function () {
                 window.location.reload();
             });
         }
