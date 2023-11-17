@@ -802,31 +802,31 @@
 	C26,18.5,30,23.8,30,30h-2C28,23.4,22.6,18,16,18z M22,10c0-3.3-2.7-6-6-6s-6,2.7-6,6s2.7,6,6,6S22,13.3,22,10z" />
                                 </svg>
                             </span>
-                    <span class="indicator__title">Hello, Log In</span>
-                    <span class="indicator__value">My Account</span>
+                    <span class="indicator__title">{{ __('Hello, Log In') }}</span>
+                    <span class="indicator__value">{{ __('My Account') }}</span>
                 </a>
                 <div class="indicator__content">
                     <div class="account-menu">
                         <form class="account-menu__form">
                             <div class="account-menu__form-title">
-                                Log In to Your Account
+                                {{ __('Log In to Your Account') }}
                             </div>
                             <div class="form-group">
-                                <label for="header-signin-email" class="sr-only">Email address</label>
-                                <input id="header-signin-email" type="email" class="form-control form-control-sm" placeholder="Email address">
+                                <label for="header-signin-email" class="sr-only">{{ __('Email address') }}</label>
+                                <input id="header-signin-email" type="email" class="form-control form-control-sm" placeholder="{{ __('Email address') }}">
                             </div>
                             <div class="form-group">
-                                <label for="header-signin-password" class="sr-only">Password</label>
+                                <label for="header-signin-password" class="sr-only">{{ __('Password') }}</label>
                                 <div class="account-menu__form-forgot">
-                                    <input id="header-signin-password" type="password" class="form-control form-control-sm" placeholder="Password">
-                                    <a href="" class="account-menu__form-forgot-link">Forgot?</a>
+                                    <input id="header-signin-password" type="password" class="form-control form-control-sm" placeholder="{{ __('Password') }}">
+                                    <a href="" class="account-menu__form-forgot-link">{{ __('Forgot?') }}</a>
                                 </div>
                             </div>
                             <div class="form-group account-menu__form-button">
-                                <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                                <button type="submit" class="btn btn-primary btn-sm">{{ __('Login') }}</button>
                             </div>
                             <div class="account-menu__form-link">
-                                <a href="account-login.html">Create An Account</a>
+                                <a href="account-login.html">{{ __('Create An Account') }}</a>
                             </div>
                         </form>
                         <div class="account-menu__divider"></div>
@@ -841,15 +841,15 @@
                         </a>
                         <div class="account-menu__divider"></div>
                         <ul class="account-menu__links">
-                            <li><a href="account-dashboard.html">Dashboard</a></li>
-                            <li><a href="account-dashboard.html">Garage</a></li>
-                            <li><a href="account-profile.html">Edit Profile</a></li>
-                            <li><a href="account-orders.html">Order History</a></li>
-                            <li><a href="account-addresses.html">Addresses</a></li>
+                            <li><a href="account-dashboard.html">{{ __('Dashboard') }}</a></li>
+                            <li><a href="account-dashboard.html">{{ __('Garage') }}</a></li>
+                            <li><a href="account-profile.html">{{ __('Edit Profile') }}</a></li>
+                            <li><a href="account-orders.html">{{ __('Order History') }}</a></li>
+                            <li><a href="account-addresses.html">{{ __('Addresses') }}</a></li>
                         </ul>
                         <div class="account-menu__divider"></div>
                         <ul class="account-menu__links">
-                            <li><a href="account-login.html">Logout</a></li>
+                            <li><a href="account-login.html">{{ __('Logout') }}</a></li>
                         </ul>
                     </div>
                 </div>
@@ -866,7 +866,7 @@
                                 </svg>
                                 <span class="indicator__counter">3</span>
                             </span>
-                    <span class="indicator__title">Shopping Cart</span>
+                    <span class="indicator__title">{{ __('Shopping Cart') }}</span>
                     <span class="indicator__value">$250.00</span>
                 </a>
                 <div class="indicator__content">
@@ -952,26 +952,26 @@
                         <div class="dropcart__totals">
                             <table>
                                 <tr>
-                                    <th>Subtotal</th>
+                                    <th>{{ __('Subtotal') }}</th>
                                     <td>$5877.00</td>
                                 </tr>
                                 <tr>
-                                    <th>Shipping</th>
+                                    <th>{{ __('Shipping') }}</th>
                                     <td>$25.00</td>
                                 </tr>
                                 <tr>
-                                    <th>Tax</th>
+                                    <th>{{ __('Tax') }}</th>
                                     <td>$0.00</td>
                                 </tr>
                                 <tr>
-                                    <th>Total</th>
+                                    <th>{{ __('Total') }}</th>
                                     <td>$5902.00</td>
                                 </tr>
                             </table>
                         </div>
                         <div class="dropcart__actions">
-                            <a href="cart.html" class="btn btn-secondary">View Cart</a>
-                            <a href="checkout.html" class="btn btn-primary">Checkout</a>
+                            <a href="cart.html" class="btn btn-secondary">{{ __('View Cart') }}</a>
+                            <a href="checkout.html" class="btn btn-primary">{{ __('Checkout') }}</a>
                         </div>
                     </div>
                 </div>

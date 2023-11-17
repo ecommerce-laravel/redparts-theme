@@ -1,4 +1,25 @@
 {
   "Select Vehicle": "اختر مركبة",
-  "Enter Keyword or Part Number": "أدخل عنوان أو رقم القطعة"
+  "Enter Keyword or Part Number": "أدخل عنوان أو رقم القطعة",
+  "Hello, Log In": "مرحبا، تسجيل دخول",
+  "My Account": "حسابي",
+  "Log In to Your Account": "تجسيل الدخول إلى حسابك",
+  "Email address": "البريد الالكتروني",
+  "Password": "كلمة المرور",
+  "Forgot?": "نسيت كلمة المرور؟",
+  "Login": "تجسيل الدخول",
+  "Create An Account": "إنشاء حساب",
+  "Dashboard": "لوحة التحكم",
+  "Garage": "كراج السيارات",
+  "Edit Profile": "تعديل الملف الشخصي",
+  "Order History": "طلباتي",
+  "Addresses": "العناوين",
+  "Logout": "تسجيل الخروج",
+  "Shopping Cart": "سلة الشراء",
+  "Subtotal": "المجموع الجزئي",
+  "Shipping": "قيمة الشحن",
+  "Tax": "قيمة الضريبة",
+  "Total": "المجموع الكلي",
+  "View Cart": "عرض السلة",
+  "Checkout": "صفحة الدفع"
 }
