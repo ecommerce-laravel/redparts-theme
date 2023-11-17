@@ -671,7 +671,7 @@
                         <div class="vehicle-picker__panel vehicle-picker__panel--list vehicle-picker__panel--active" data-panel="list">
                             <div class="vehicle-picker__panel-body">
                                 <div class="vehicle-picker__text">
-                                    Select a vehicle to find exact fit parts
+                                    {{ __('Select a vehicle to find exact fit parts') }}
                                 </div>
                                 <div class="vehicles-list">
                                     <div class="vehicles-list__body">
@@ -712,7 +712,7 @@
                                     </div>
                                 </div>
                                 <div class="vehicle-picker__actions">
-                                    <button type="button" class="btn btn-primary btn-sm" data-to-panel="form">Add A Vehicle</button>
+                                    <button type="button" class="btn btn-primary btn-sm" data-to-panel="form">{{ __('Add A Vehicle') }}</button>
                                 </div>
                             </div>
                         </div>
