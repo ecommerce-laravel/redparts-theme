@@ -549,7 +549,7 @@
             <div class="search">
                 <form action="" class="search__body">
                     <div class="search__shadow"></div>
-                    <input class="search__input" type="text" placeholder="Enter Keyword or Part Number">
+                    <input class="search__input" type="text" placeholder="{{ __('Enter Keyword or Part Number') }}">
                     <button class="search__button search__button--start" type="button">
                                 <span class="search__button-icon"><svg width="20" height="20">
                                         <path d="M6.6,2c2,0,4.8,0,6.8,0c1,0,2.9,0.8,3.6,2.2C17.7,5.7,17.9,7,18.4,7C20,7,20,8,20,8v1h-1v7.5c0,0.8-0.7,1.5-1.5,1.5h-1
@@ -560,7 +560,7 @@
 	C15.5,10.2,14,11.3,14,12z" />
                                     </svg>
                                 </span>
-                        <span class="search__button-title">Select Vehicle</span>
+                        <span class="search__button-title">{{ __('Select Vehicle') }}</span>
                     </button>
                     <button class="search__button search__button--end" type="submit">
                                 <span class="search__button-icon"><svg width="20" height="20">
