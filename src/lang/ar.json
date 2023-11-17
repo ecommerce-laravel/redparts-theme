@@ -24,5 +24,12 @@
   "Checkout": "صفحة الدفع",
   "Shop By Category": "تصفح حسب القسم",
   "Select a vehicle to find exact fit parts": "اختر سيارة للعثور على القطع المطابقة",
-  "Add A Vehicle": "أضف سيارة"
+  "Add A Vehicle": "أضف مركبة",
+  "Select Year": "سنة التصنيع",
+  "Select Brand": "العلامة التجارية",
+  "Select Model": "فئة المركبة",
+  "Select Engine": "سعة المحرك",
+  "Or": "أو",
+  "Enter VIN number": "أدخل رقم الشاصي",
+  "Back to vehicles list": "الرجوع لقائمة المركبات"
 }

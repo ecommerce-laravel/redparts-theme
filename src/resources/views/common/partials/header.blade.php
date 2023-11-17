@@ -721,7 +721,7 @@
                                 <div class="vehicle-form vehicle-form--layout--search">
                                     <div class="vehicle-form__item vehicle-form__item--select">
                                         <select class="form-control form-control-select2" aria-label="Year">
-                                            <option value="none">Select Year</option>
+                                            <option value="none">{{ __('Select Year') }}</option>
                                             <option>2010</option>
                                             <option>2011</option>
                                             <option>2012</option>
@@ -737,7 +737,7 @@
                                     </div>
                                     <div class="vehicle-form__item vehicle-form__item--select">
                                         <select class="form-control form-control-select2" aria-label="Brand" disabled>
-                                            <option value="none">Select Brand</option>
+                                            <option value="none">{{ __('Select Brand') }}</option>
                                             <option>Audi</option>
                                             <option>BMW</option>
                                             <option>Ferrari</option>
@@ -750,7 +750,7 @@
                                     </div>
                                     <div class="vehicle-form__item vehicle-form__item--select">
                                         <select class="form-control form-control-select2" aria-label="Model" disabled>
-                                            <option value="none">Select Model</option>
+                                            <option value="none">{{ __('Select Model') }}</option>
                                             <option>Explorer</option>
                                             <option>Focus S</option>
                                             <option>Fusion SE</option>
@@ -759,22 +759,22 @@
                                     </div>
                                     <div class="vehicle-form__item vehicle-form__item--select">
                                         <select class="form-control form-control-select2" aria-label="Engine" disabled>
-                                            <option value="none">Select Engine</option>
+                                            <option value="none">{{ __('Select Engine') }}</option>
                                             <option>Gas 1.6L 125 hp AT/L4</option>
                                             <option>Diesel 2.5L 200 hp AT/L5</option>
                                             <option>Diesel 3.0L 250 hp MT/L5</option>
                                         </select>
                                     </div>
-                                    <div class="vehicle-form__divider">Or</div>
+                                    <div class="vehicle-form__divider">{{ __('Or') }}</div>
                                     <div class="vehicle-form__item">
-                                        <input type="text" class="form-control" placeholder="Enter VIN number" aria-label="VIN number">
+                                        <input type="text" class="form-control" placeholder="{{ __('Enter VIN number') }}" aria-label="VIN number">
                                     </div>
                                 </div>
                                 <div class="vehicle-picker__actions">
                                     <div class="search__car-selector-link">
-                                        <a href="" data-to-panel="list">Back to vehicles list</a>
+                                        <a href="" data-to-panel="list">{{ __('Back to vehicles list') }}</a>
                                     </div>
-                                    <button type="button" class="btn btn-primary btn-sm" disabled>Add A Vehicle</button>
+                                    <button type="button" class="btn btn-primary btn-sm" disabled>{{ __('Add A Vehicle') }}</button>
                                 </div>
                             </div>
                         </div>
