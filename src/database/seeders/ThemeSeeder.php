@@ -1,6 +1,6 @@
 <?php
 
-namespace seeders;
+namespace Wjurry\RedParts\seeders;
 
 use App\Models\Theme;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -14,7 +14,6 @@ class ThemeSeeder extends Seeder
             Theme::query()->where('name', 'RedParts')->firstOrFail();
         } catch (ModelNotFoundException $exception) {
             Theme::factory()->createOne([
-                "id" => "48b07532-eb69-415b-8f52-128774ff9e0f",
                 "name" => "RedParts",
                 "slug" => "redparts",
                 "author" => "Kos9",

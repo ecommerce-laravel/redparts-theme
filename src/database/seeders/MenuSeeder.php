@@ -1,6 +1,6 @@
 <?php
 
-namespace seeders;
+namespace Wjurry\RedParts\seeders;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\Seeder;
