@@ -26,7 +26,8 @@ class MenuSeeder extends Seeder
     public function mainMenus()
     {
         try {
-            Menu::query()->where('name', 'CallUs')->firstOrFail();
+            $callUsMenu = Menu::query()->where('name', 'CallUs')->firstOrFail();
+            $this->callUsMenuId = $callUsMenu->id;
         } catch (ModelNotFoundException $exception) {
             $callUsMenu = (new Menu(['name' => 'CallUs', 'slug' => 'red-parts']));
             $callUsMenu->save();
@@ -34,7 +35,8 @@ class MenuSeeder extends Seeder
         }
 
         try {
-            Menu::query()->where('name', 'TopRight')->firstOrFail();
+            $topRightMenu = Menu::query()->where('name', 'TopRight')->firstOrFail();
+            $this->topRightMenuId = $topRightMenu->id;
         } catch (ModelNotFoundException $exception) {
             $topRightMenu = (new Menu(['name' => 'TopRight', 'slug' => 'red-parts']));
             $topRightMenu->save();
@@ -42,7 +44,8 @@ class MenuSeeder extends Seeder
         }
 
         try {
-            Menu::query()->where('name', 'TopLeft')->firstOrFail();
+            $topLeftMenu = Menu::query()->where('name', 'TopLeft')->firstOrFail();
+            $this->topLeftMenuId = $topLeftMenu->id;
         } catch (ModelNotFoundException $exception) {
             $topLeftMenu = (new Menu(['name' => 'TopLeft', 'slug' => 'red-parts']));
             $topLeftMenu->save();
@@ -50,7 +53,8 @@ class MenuSeeder extends Seeder
         }
 
         try {
-            Menu::query()->where('name', 'MainMenu')->firstOrFail();
+            $mainMenu = Menu::query()->where('name', 'MainMenu')->firstOrFail();
+            $this->mainMenuId = $mainMenu->id;
         } catch (ModelNotFoundException $exception) {
             $mainMenu = (new Menu( ["name" => 'MainMenu', 'slug' => 'red-parts']));
             $mainMenu->save();
