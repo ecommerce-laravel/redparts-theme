@@ -378,7 +378,7 @@ class MenuSeeder extends Seeder
                 "order" => 1,
                 "enabled" => 1,
                 "nestable" => 1
-            ]));
+            ]))->save();
 
             $shopMenuItemEn = new MenuItem([
                 "menu_id" => $this->mainMenuId,
